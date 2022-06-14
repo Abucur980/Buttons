@@ -22,24 +22,17 @@
         <form action="" class="m-auto row">
             <div class="col-auto">
                 <label for="n-numbers" class="form-label">Add the number of buttons:</label>
-                <input class="form-control" name="" id="n-numbers" placeholder="Nr. of buttons">
+                <input type="number" class="form-control" name="" id="numOfButtons" placeholder="Nr. of buttons">
             </div>
             <div class="col-auto mt-auto">
-                <button type="submit" class="btn btn-primary">Start</button>
+                <button id="button" type="button" class="btn btn-primary">Start</button>
             </div>
         </form>
     
-        <div class="d-flex justify-content-center justify-content-evenly flex-wrap mt-5">
-          <button id="button" type="button" class="btn btn-warning btn-lg m-2">
+        <div id="buttonContainer" class="d-flex justify-content-center justify-content-evenly flex-wrap mt-5">
+          <!-- <button id="button" type="button" class="btn btn-warning btn-lg m-2">
             Button
-          </button>
-          <button id="button" type="button" class="btn btn-warning btn-lg m-2">
-            Button
-          </button>
-          <button id="button" type="button" class="btn btn-warning btn-lg m-2">
-            Button
-          </button>
-        </div>
+          </button> -->
     </div>
     
     <script src="index.js"></script>
