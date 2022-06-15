@@ -1,14 +1,17 @@
 document.getElementById('button').addEventListener('click', addButtons);
 
 function addButtons() {
+    // get the value from input
     let nButtons = document.getElementById('numOfButtons').value;
-    // console.log("am intrat in functie" + nButtons);
+    // generate n buttons
     for (let i = 0; i < nButtons; ++i) {
-        // console.log("it loops " + nButtons);
         document.getElementById('buttonContainer').insertAdjacentHTML("beforeend", '<button type="button" class="button btn btn-warning btn-lg m-2">Button</button>');
     }
+    // get all buttons with the class button
     let allButtons = document.querySelectorAll(".button");
+    // generate the index for the lucky button
     let theLuckyOne = Math.floor(Math.random() * allButtons.length);
+    // loop through the buttons and find the lucky one
     allButtons.forEach((btn, ini)=> {
         btn.addEventListener('click', (e) => {
             console.log(e.target + " " + ini);
