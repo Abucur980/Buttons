@@ -15,16 +15,18 @@ function addButtons() {
     // generate the index for the lucky button
     let theLuckyOne = Math.floor(Math.random() * allButtons.length);
     // loop through the buttons and find the lucky one
-    allButtons.forEach((btn, ini)=> {
-        btn.addEventListener('click', (e) => {
-            console.log(e.target + " " + ini);
-            if (ini === theLuckyOne) {
-                allButtons[ini].classList.remove('btn-warning');
-                allButtons[ini].classList.add('btn-success');
+    allButtons.forEach((btn, i)=> {
+        btn.addEventListener('click', () => {
+            if (i === theLuckyOne) {
+                allButtons[i].textContent = "Correct!";
+                allButtons[i].classList.remove('btn-warning');
+                allButtons[i].classList.add('btn-success');
             } else {
-                allButtons[ini].classList.add('btn-danger');
+                allButtons[i].classList.add('btn-danger');
+                allButtons[i].textContent = "Wrong!";
                 setTimeout(()=>{
-                    allButtons[ini].classList.remove('btn-danger');
+                    allButtons[i].textContent = "Button";
+                    allButtons[i].classList.remove('btn-danger');
                 }, 350);
             }
         });
